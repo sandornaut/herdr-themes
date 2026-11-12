@@ -1,6 +1,6 @@
 # Amber
 
-A warm, retro-terminal look for Herdr: amber text on dark brown, a sidebar of spaces and agents on the left, tabs on top, rounded pane cards in the middle, an optional Files/Changes panel on the right and a one-line status bar. Everything is set in IBM Plex Mono.
+A warm, retro-terminal look for Herdr: amber text on dark brown, a sidebar of spaces and agents on the left, tabs on top, rounded pane cards in the middle, an optional Files/Changes panel on the right and a one-line status bar. Everything is set in BlexMono Nerd Font Mono (IBM Plex Mono patched with Nerd Font icons).
 
 ![Amber](preview.png)
 
@@ -17,7 +17,7 @@ Left to right, top to bottom. No native title bar (`titlebar: "none"`); the wind
 - **Pane cards**: gradient `#524633` → `#3a3226` at 160°, 1px border `#8a6a1c`, focused pane's border becomes `accent` (`#ffcc33`), **corner radius 10**, 8px gap between panes. A lone pane is still framed (`lone: true`). Terminals have 0.88 opacity and padding of 14px vertical, 12px horizontal.
 - **Status bar** (28px, top border, 11.8px text in `muted`): where the space runs ("This computer" or the machine name), the git branch if any, an agent count (plus "· N needs you" in `blocked` orange when any agent is blocked), and on the right the key bound to the command palette (e.g. `⌃⇧P  commands`).
 
-Type: terminals use IBM Plex Mono at 16px; the panels also use IBM Plex Mono (`ui_font`).
+Type: terminals use BlexMono Nerd Font Mono at 16px; the panels also use it (`ui_font`).
 
 ## How it behaves
 
@@ -37,7 +37,7 @@ Agent status colors (from the theme): **working** `#ffcc33` (a spinning icon in 
 
 **Theme** (`themes/amber.json`): terminal background `#3b3326`, foreground `#ffb000`, selection `#6e5a2c`, cursor `#ffcc33`; a 16-color ANSI ramp in ambers and oranges (black `#40372a`, red `#ff6a1a`, bright white `#fff0c4`, and so on). Named colors: `chrome #2b251b`, `canvas #211c15`, `surface #3b3326`, `popover #463d2e`, `raised #4f4534`, `hover #5a4f3c`, `selected #675a44`, `border #74664b`, `input #9a8350`, `muted #c98a00`, `dim #a08a58`, `accent #ffcc33`, `accent_foreground #3b3326`, `solid #ffb000`, `solid_foreground #3b3326`, plus the four status colors above.
 
-**Layout** (`layouts/amber.json`): root row of `sidebar` (column: `brand`, `sidebar-lists` = `spaces` + `agents`, `sidebar-footer`) and `work` (column: `tabs`, `work-body` row of `main` + `panel`, `status`). `main` is the tab block: `{ "tab": "active", "pane": { header: amber-pane, 30px, always, top; gradient background; border; focus; radius 10; gap 8; lone true } }`. `panel` is a column with a `stack` (`panel-body`, active `files`) of `files` and `changes`, 368px, `hidden: true`. Root settings: `theme: "amber"`, `terminal_opacity: 0.88`, `terminal_padding: [14, 12]`, `font` and `ui_font` "IBM Plex Mono", `font_size: 16`, `titlebar: "none"`, `traffic_lights: [12, 16]`, `divider` 1px `border`.
+**Layout** (`layouts/amber.json`): root row of `sidebar` (column: `brand`, `sidebar-lists` = `spaces` + `agents`, `sidebar-footer`) and `work` (column: `tabs`, `work-body` row of `main` + `panel`, `status`). `main` is the tab block: `{ "tab": "active", "pane": { header: amber-pane, 30px, always, top; gradient background; border; focus; radius 10; gap 8; lone true } }`. `panel` is a column with a `stack` (`panel-body`, active `files`) of `files` and `changes`, 368px, `hidden: true`. Root settings: `theme: "amber"`, `terminal_opacity: 0.88`, `terminal_padding: [14, 12]`, `font` and `ui_font` "BlexMono Nerd Font Mono", `font_size: 16`, `titlebar: "none"`, `traffic_lights: [12, 16]`, `divider` 1px `border`.
 
 **Mods** (each `mods/<name>/main.js` + `mod.json`, `place: "none"` so they only appear where the layout puts them):
 
@@ -56,7 +56,7 @@ Art: each mod carries its own SVG icons in its folder. The mods also reference i
 
 ## Watch out
 
-- **Fonts:** install IBM Plex Mono first (`brew install --cask font-ibm-plex-mono` or https://github.com/IBM/plex) and restart Herdr. Without it terminals fall back to JetBrains Mono and the panels to the default UI font. Different Plex builds (`.otf` from IBM vs `.ttf` from Google Fonts) look slightly different.
+- **Fonts:** install BlexMono Nerd Font Mono first (`brew install --cask font-blex-mono-nerd-font` or https://www.nerdfonts.com/font-downloads, "BlexMono") and restart Herdr. Without it terminals fall back to JetBrains Mono and the panels to the default UI font. Different Plex builds (`.otf` from IBM vs `.ttf` from Google Fonts) look slightly different.
 - **Programs run:** `amber-files`, `amber-changes` and `amber-spaces` run `git` and `sh` (PowerShell on Windows); `amber-spaces` also runs `hc`. No mod uses the network.
 - **Hardcoded colors:** gradients and the pane border (`#8a6a1c`) are literal hex values in the layout, not theme names, so changing the theme file alone won't recolor them.
 - **Sizes:** sidebar 268px (fixed, `resizable: false`), tabs 42px, status 28px, pane header 30px, panel 368px (280–900).
@@ -66,7 +66,7 @@ Art: each mod carries its own SVG icons in its folder. The mods also reference i
 ## Done when
 
 - `herdr-app check` passes for every `amber-*` mod, and `layout.switch {name: "amber"}` opens the layout.
-- The window has no native title bar, an amber-on-brown palette, and IBM Plex Mono throughout.
+- The window has no native title bar, an amber-on-brown palette, and BlexMono Nerd Font Mono throughout.
 - Pane cards have rounded corners (radius 10) with an 8px gap; the focused one has a yellow (`#ffcc33`) border.
 - Hovering a pane header shows split-right, split-down, zoom and close buttons, and each works.
 - A working agent shows a spinner in its pane header; a blocked one shows "Needs you" and the status bar counts it.
