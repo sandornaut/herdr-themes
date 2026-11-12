@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1400" viewBox="0 -270 1400 1400" font-family="'IBM Plex Mono', monospace">
+<defs>
+<linearGradient id="bar" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3e3528"/><stop offset="1" stop-color="#3b3326"/></linearGradient>
+<linearGradient id="card" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#524633"/><stop offset="1" stop-color="#3a3226"/></linearGradient>
+<clipPath id="c1"><rect x="288" y="62" width="560" height="722" rx="10"/></clipPath>
+<clipPath id="c2"><rect x="856" y="62" width="536" height="722" rx="10"/></clipPath>
+</defs>
+<rect width="1400" height="860" fill="#211c15"/>
+<!-- sidebar -->
+<rect x="0" y="0" width="268" height="860" fill="url(#bar)"/>
+<line x1="268.5" y1="0" x2="268.5" y2="860" stroke="#74664b"/>
+<circle cx="22" cy="23" r="6" fill="#ff6a1a"/><circle cx="42" cy="23" r="6" fill="#ffcc33"/><circle cx="62" cy="23" r="6" fill="#b87800"/>
+<rect x="92" y="14" width="18" height="18" rx="3" fill="#ffb000"/>
+<text x="118" y="28" font-size="13.5" font-weight="600" fill="#ffb000">Herdr</text>
+<text x="222" y="28" font-size="14" fill="#c98a00">⌕</text><text x="244" y="28" font-size="14" fill="#c98a00">▤</text>
+<line x1="0" y1="46.5" x2="268" y2="46.5" stroke="#74664b" opacity=".4"/>
+<text x="14" y="72" font-size="11" fill="#a08a58" letter-spacing="1">SPACES</text>
+<rect x="8" y="82" width="252" height="46" rx="0" fill="#675a44"/>
+<text x="20" y="102" font-size="13" fill="#ffb000">demo-api</text><text x="20" y="119" font-size="11" fill="#a08a58">⎇ main</text>
+<text x="20" y="152" font-size="13" fill="#c98a00">demo-website</text><text x="20" y="169" font-size="11" fill="#a08a58">⎇ redesign</text>
+<text x="20" y="202" font-size="13" fill="#c98a00">scratch</text><text x="20" y="219" font-size="11" fill="#a08a58">⎇ main</text>
+<line x1="8" y1="420.5" x2="260" y2="420.5" stroke="#74664b" opacity=".4"/>
+<text x="14" y="446" font-size="11" fill="#a08a58" letter-spacing="1">AGENTS</text>
+<circle cx="24" cy="474" r="4" fill="#ffcc33"/><text x="38" y="478" font-size="13" fill="#ffb000">claude</text><text x="260" y="478" font-size="11" fill="#ffcc33" text-anchor="end">working</text>
+<circle cx="24" cy="506" r="4" fill="#ff6a1a"/><text x="38" y="510" font-size="13" fill="#ffb000">codex</text><text x="260" y="510" font-size="11" fill="#ff6a1a" text-anchor="end">needs you</text>
+<circle cx="24" cy="538" r="4" fill="#ffe9a8"/><text x="38" y="542" font-size="13" fill="#ffb000">claude</text><text x="260" y="542" font-size="11" fill="#ffe9a8" text-anchor="end">done</text>
+<circle cx="24" cy="570" r="4" fill="#a08a58"/><text x="38" y="574" font-size="13" fill="#c98a00">shell</text><text x="260" y="574" font-size="11" fill="#a08a58" text-anchor="end">idle</text>
+<line x1="0" y1="791.5" x2="268" y2="791.5" stroke="#74664b"/>
+<text x="34" y="819" font-size="13" fill="#c98a00">⚙  Settings</text>
+<text x="34" y="845" font-size="13" fill="#a08a58">+  Add machine</text>
+<!-- tabs -->
+<rect x="269" y="0" width="1131" height="42" fill="url(#bar)"/>
+<line x1="269" y1="42.5" x2="1400" y2="42.5" stroke="#74664b" opacity=".4"/>
+<rect x="281" y="8" width="110" height="28" fill="#675a44"/><text x="296" y="27" font-size="13" fill="#ffb000">main</text><text x="370" y="27" font-size="12" fill="#a08a58">✕</text>
+<text x="414" y="27" font-size="13" fill="#c98a00">tests</text><text x="480" y="27" font-size="13" fill="#c98a00">docs</text>
+<text x="1290" y="27" font-size="13" fill="#c98a00">Files</text><text x="1340" y="27" font-size="13" fill="#c98a00">Changes</text>
+<!-- pane 1 (focused) -->
+<rect x="288" y="62" width="560" height="722" rx="10" fill="url(#card)"/>
+<g clip-path="url(#c1)"><rect x="288" y="62" width="560" height="30" fill="#3b3326"/></g>
+<line x1="289" y1="92.5" x2="847" y2="92.5" stroke="#74664b"/>
+<text x="302" y="82" font-size="12" font-weight="500" fill="#ffb000">claude</text><text x="360" y="82" font-size="12" fill="#a08a58">~/projects/demo-api</text>
+<text x="830" y="82" font-size="12" fill="#ffcc33" text-anchor="end">◜</text>
+<rect x="288" y="62" width="560" height="722" rx="10" fill="none" stroke="#ffcc33"/>
+<g font-size="14" fill="#ffb000">
+<text x="304" y="126" fill="#a08a58">$ claude</text>
+<text x="304" y="156">● Reading src/routes/users.ts</text>
+<text x="304" y="180" fill="#d98a00">  ⎿ 142 lines</text>
+<text x="304" y="212">● I'll add input validation to the</text>
+<text x="304" y="234">  create-user handler and a test.</text>
+<text x="304" y="266" fill="#ffd37a">+ export const createUser = (req) =&gt; {</text>
+<text x="304" y="288" fill="#ffd37a">+   const body = parse(req.body);</text>
+<text x="304" y="310" fill="#ff8c42">- return db.insert(req.body);</text>
+<text x="304" y="332" fill="#ffd37a">+   return db.insert(body);</text>
+<text x="304" y="354" fill="#ffd37a">+ };</text>
+<text x="304" y="396" fill="#ffcc33">▍</text>
+</g>
+<!-- pane 2 -->
+<rect x="856" y="62" width="536" height="722" rx="10" fill="url(#card)"/>
+<g clip-path="url(#c2)"><rect x="856" y="62" width="536" height="30" fill="#3b3326"/></g>
+<line x1="857" y1="92.5" x2="1391" y2="92.5" stroke="#74664b"/>
+<text x="870" y="82" font-size="12" font-weight="500" fill="#ffb000">codex</text><text x="922" y="82" font-size="12" fill="#a08a58">~/projects/demo-api</text>
+<rect x="1296" y="67" width="82" height="20" fill="#ff6a1a" opacity=".15"/><text x="1337" y="81" font-size="10.5" font-weight="600" fill="#ff6a1a" text-anchor="middle">Needs you</text>
+<rect x="856" y="62" width="536" height="722" rx="10" fill="none" stroke="#8a6a1c"/>
+<g font-size="14" fill="#ffb000">
+<text x="872" y="126" fill="#a08a58">$ codex</text>
+<text x="872" y="156">Run migration 0007_add_index?</text>
+<text x="872" y="188" fill="#ff6a1a">  ▸ yes   no   always</text>
+</g>
+<!-- status -->
+<rect x="269" y="832" width="1131" height="28" fill="url(#bar)"/>
+<line x1="269" y1="832.5" x2="1400" y2="832.5" stroke="#74664b"/>
+<g font-size="11.8" fill="#c98a00"><text x="283" y="850">▭ This computer</text><text x="430" y="850">⎇ main</text><text x="520" y="850">● 4 agents</text><text x="620" y="850" fill="#ff6a1a">· 1 needs you</text><text x="1384" y="850" fill="#a08a58" text-anchor="end">⌃⇧P  commands</text></g>
+</svg>
