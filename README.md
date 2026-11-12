@@ -12,4 +12,4 @@ Ask your Herdr agent to add `https://github.com/sandornaut/herdr-themes/tree/mai
 or copy by hand: `layouts/*.json` → `~/.config/herdr-app/layouts/`, `themes/*.json` →
 `themes/`, `mods/*` → `mods/`. Then `herdr-app check` and switch layouts with `ctrl-shift-l`.
 
-Install the Nerd Font first for the intended look: `brew install --cask font-blex-mono-nerd-font`.
+The layout bundles its font (BlexMono Nerd Font Mono), so there's nothing to install separately.
