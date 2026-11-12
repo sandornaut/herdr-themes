@@ -52,11 +52,11 @@ Agent status colors (from the theme): **working** `#ffcc33` (a spinning icon in 
 | `amber-changes` | Git changes and diffs. Runs `git rev-parse`, `git diff` and related read-only commands. |
 | `amber-workspace-status` | Status bar. Reads `spaces()`, `agents()`, `keys()`, `window()`; runs `app.palette` on click. |
 
-Art: each mod carries its own SVG icons in its folder. The mods also reference icons and an image from Herdr itself: `mods/pane/close.svg`, `mods/workspace-chrome/spinner.svg`, `mods/workspace-chrome/plus.svg` and `frame/welcome/herdr.png`.
+Art: each mod carries its own SVG icons in its folder; `amber-workspace-chrome` also carries the font files. The mods also reference icons and an image from Herdr itself: `mods/pane/close.svg`, `mods/workspace-chrome/spinner.svg`, `mods/workspace-chrome/plus.svg` and `frame/welcome/herdr.png`.
 
 ## Watch out
 
-- **Fonts:** install BlexMono Nerd Font Mono first (`brew install --cask font-blex-mono-nerd-font` or https://www.nerdfonts.com/font-downloads, "BlexMono") and restart Herdr. Without it terminals fall back to JetBrains Mono and the panels to the default UI font. Different Plex builds (`.otf` from IBM vs `.ttf` from Google Fonts) look slightly different.
+- **Fonts:** the layout brings BlexMono Nerd Font Mono as `.ttf` files in `mods/amber-workspace-chrome/fonts/` (SIL OFL 1.1, license included); Herdr loads them at start and on the next look change. Fonts installed on the system are not found reliably, so keep the bundled copies. Without them the terminals fall back to JetBrains Mono and the panels to the default sans-serif.
 - **Programs run:** `amber-files`, `amber-changes` and `amber-spaces` run `git` and `sh` (PowerShell on Windows); `amber-spaces` also runs `hc`. No mod uses the network.
 - **Hardcoded colors:** gradients and the pane border (`#8a6a1c`) are literal hex values in the layout, not theme names, so changing the theme file alone won't recolor them.
 - **Sizes:** sidebar 268px (fixed, `resizable: false`), tabs 42px, status 28px, pane header 30px, panel 368px (280–900).
